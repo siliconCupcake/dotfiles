@@ -1,0 +1,40 @@
+XTerm*vt100.translations: #override \
+    Shift Ctrl <Key> C: copy-selection(CLIPBOARD) \n\
+    Shift Ctrl <Key> V: insert-selection(CLIPBOARD)
+
+! special
+*.foreground:   #ffffff
+*.background:   #000000
+*.cursorColor:  #8ca68c
+
+! black
+*.color0:       #000000
+*.color8:       #000000
+
+! red
+*.color1:       #e6193c
+*.color9:       #e6193c
+
+! green
+*.color2:       #01a252
+*.color10:      #01a252
+
+! yellow
+*.color3:       #c3c322
+*.color11:      #c3c322
+
+! blue
+*.color4:       #01a0e4
+*.color12:      #01a0e4
+
+! magenta
+*.color5:       #e16a98
+*.color13:      #e16a98
+
+! cyan
+*.color6:       #72d3e7
+*.color14:      #72d3e7
+
+! white
+*.color7:       #ffffff
+*.color15:      #ffffff

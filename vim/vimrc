@@ -1,0 +1,11 @@
+syntax on
+set number
+set autoindent
+set tabstop=4
+set shiftwidth=4
+set clipboard=unnamedplus
+colorscheme elflord
+highlight LineNr term=bold cterm=bold ctermfg=grey
+highlight CursorLine cterm=NONE ctermbg=NONE ctermfg=NONE guibg=NONE guifg=NONE
+highlight CursorLineNr term=bold cterm=bold ctermfg=green
+set cursorline
