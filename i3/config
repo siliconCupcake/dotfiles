@@ -58,7 +58,7 @@ exec --no-startup-id "sudo mount /dev/sda6 /mnt/ravenclaw"
 bindsym $mod+Return exec --no-startup-id i3-sensible-terminal
 
 # start battery notification service
-exec --no-startup-id "$HOME/.config/i3/battery.sh -L 20 -t 30s"
+exec --no-startup-id "$HOME/.config/i3/battery.sh -L 15 -l 10 -t 30s"
 
 # start chrome
 bindsym $mod+g exec --no-startup-id chromium

@@ -79,6 +79,7 @@ radius-bottom = 0.0
 ;   {overline,underline}-color
 ;;overline-size = 0
 ;;overline-color = ${color.ac}
+underline-size = 1
 
 ; Values applied to all borders
 ; Individual side values can be defined using:
@@ -125,7 +126,7 @@ font-2 = "Iosevka Nerd Font:size=11;3"
 modules-left = i3
 modules-center = 
 ; modules-right = alsa network battery time date sysmenu tray
-modules-right = pulseaudio wifi ethernet battery filesystem date time
+modules-right = backlight pulseaudio wifi ethernet battery filesystem date time
 ; The separator will be inserted between the output of each module
 separator =  
 
