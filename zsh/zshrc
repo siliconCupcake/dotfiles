@@ -21,7 +21,28 @@ alias hotspot="nmcli dev wifi hotspot ifname wlo1 ssid DebianWifi password 'Rand
 alias sleep="i3lock-fancy -p -- scrot -Z; systemctl suspend"
 alias shutdown="shutdown now"
 alias hibernate="i3lock-fancy -p -- scrot -Z; systemctl hibernate"
-alias spotify="spotifyd; spt"
+# alias spotify="spotifyd; spt"
+
+VPN_STATUS=0
+
+function vpn() {
+	if [[ $1 == "start" && $VPN_STATUS -eq 0 ]]; then
+		sudo openvpn --config /etc/openvpn/the-cupcake-vpn.ovpn --daemon
+		VPN_STATUS=1
+	elif [[ $1 == "stop" ]]; then
+		sudo killall openvpn
+		VPN_STATUS=0
+	elif [[ $1 == "status" && $VPN_STATUS -eq 0 ]]; then
+		echo "OFF"
+	elif [[ $1 == "status" && $VPN_STATUS -eq 1 ]]; then
+		echo "ON"
+	else
+		echo "Incorrect usage"
+	fi
+}
+
+#alias vpn-start="sudo openvpn --config /etc/openvpn/the-cupcake-vpn.ovpn --daemon"
+#alias vpn-stop="sudo killall openvpn"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -30,7 +51,7 @@ alias spotify="spotifyd; spt"
 #ZSH_THEME="robbyrussell"
 ZSH_THEME="elessar"
 
-[ -n "$XTERM_VERSION" ] && transset-df --id "$WINDOWID" >/dev/null
+# [ -n "$XTERM_VERSION" ] && transset-df --id "$WINDOWID" >/dev/null
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load

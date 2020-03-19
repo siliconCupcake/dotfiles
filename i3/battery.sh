@@ -1,4 +1,4 @@
-#! /bin/bash
+#! /bin/zsh
 
 ################################################################################
 # A script that shows a battery warning on i3wm                                #

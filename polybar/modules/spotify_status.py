@@ -101,7 +101,7 @@ try:
     album = fix_string(metadata['xesam:album']) if metadata['xesam:album'] else ''
 
     if not artist and not song and not album:
-        print('')
+        print('Spotify')
     else:
         if len(song) > trunclen:
             song = song[0:trunclen]
@@ -118,6 +118,6 @@ try:
 
 except Exception as e:
     if isinstance(e, dbus.exceptions.DBusException):
-        print('')
+        print('Spotify')
     else:
         print(e)

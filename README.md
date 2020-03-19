@@ -19,6 +19,10 @@
 - Install dunst
 - Copy dunstrc to ~/.config/dunst/
 
+### COMPTON
+- Install Compton from https://github.com/chjj/compton/issues/537#issuecomment-506034872
+- Copy compton.conf to ~/.config/
+
 ### TLP
 - Install tlp and tlp-rdw
 - Copy tlp.conf tp /etc/
